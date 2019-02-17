@@ -12,6 +12,13 @@ namespace Frontend
 {
     public partial class Agregar : System.Web.UI.Page
     {
+
+        Fichas modeloFicha = new Fichas();
+        accionesSQL accion = new accionesSQL();
+        validadores val = new validadores();
+
+        List<String> errores = new List<String>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             dateCalendario.SelectedDate = DateTime.Today;
@@ -19,11 +26,7 @@ namespace Frontend
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            Fichas modeloFicha = new Fichas();
-            accionesSQL accion = new accionesSQL();
-            validadores val = new validadores();
 
-            List<String> errores = new List<String>();
 
             if (!val.vNumeroFloat(txtPromedio.Text))
             {
@@ -84,6 +87,8 @@ namespace Frontend
                 {
                     Response.Write(item + "<br />");
                 }
+
+                errores.Clear();
             }
 
 

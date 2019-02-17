@@ -6,12 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using Backend.daos;
+using Backend.util;
 
 namespace Frontend
 {
     public partial class Página_Principal : System.Web.UI.Page
     {
         accionesSQL accion = new accionesSQL();
+        validadores val = new validadores();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,7 +35,23 @@ namespace Frontend
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+            if (val.vNumero(txtID.Text))
+            {
+                if (accion.delete(int.Parse(txtID.Text)))
+                {
+                    Response.Redirect("Página Principal.aspx");
+                    txtID.Text = "";
+                    Response.Write("Registro eliminado con éxito.");
+                }
+                else
+                {
+                    Response.Write("Error al eliminar el registro.");
+                }
+            }
+            else
+            {
+                Response.Write("El ID está mal especificado.");
+            }
         }
     }
 }
