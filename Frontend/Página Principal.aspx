@@ -25,6 +25,7 @@
         </div>
         <div>
             <asp:GridView ID="grdTabla" runat="server">
+                <RowStyle HorizontalAlign="Center" />
             </asp:GridView>
         </div>
     </form>

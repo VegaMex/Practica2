@@ -10,6 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+
+            <asp:Button ID="btnRegresar" runat="server" OnClick="btnRegresar_Click" Text="Regresar" />
+
+        </div>
+        <div>
             <h2>Registro de fichas</h2>
         </div>
         <hr />

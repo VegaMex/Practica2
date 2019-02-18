@@ -10,6 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+
+            <asp:Button ID="btnRegresar" runat="server" OnClick="btnRegresar_Click" Text="Regresar" />
+
+        </div>
+        <div>
             <h2>Modificar ficha</h2>
         </div>
         <hr />
@@ -27,7 +32,7 @@
             <asp:TextBox ID="txtFicha" runat="server"></asp:TextBox>
             <br /><br />
             Fecha de solicitud:<br />
-            <asp:Calendar ID="dateCalendario" runat="server"></asp:Calendar>
+            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
             <br />
             Escuela de procedencia:<br />
             <asp:TextBox ID="txtProcedencia" runat="server"></asp:TextBox>

@@ -21,7 +21,7 @@ namespace Frontend
             SqlConnection con = new SqlConnection(@"server = DESKTOP-593ANJD ; database = pruebas; USER ID = sa; PASSWORD = root");
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT id_Ficha AS ID, nombre AS Nombre, a_paterno AS 'Apellido Paterno', a_materno AS 'Apellido Materno',"+
+            SqlCommand cmd = new SqlCommand("SELECT id_Ficha AS ID, nombre AS Nombre, a_paterno AS 'Apellido Paterno', a_materno AS 'Apellido Materno'," +
             "n_ficha AS Número, REPLACE(CONVERT(NVARCHAR, fecha, 106), ' ', '/') AS Fecha, procedencia AS 'Escuela de Procedencia', opc_1 AS 'Opción 1'," +
             "opc_2 AS 'Opción 2', opc_3 AS 'Opción 3', promedio AS Promedio FROM fichas", con);
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -29,13 +29,15 @@ namespace Frontend
             grdTabla.DataBind();
             con.Close();
 
-            foreach (GridViewRow row in grdTabla.Rows)
-            {
-                foreach (TableCell cell in row.Cells)
-                {
-                    cell.Attributes.CssStyle["text-align"] = "center";
-                }
-            }
+
+
+            //foreach (GridViewRow row in grdTabla.Rows)
+            //{
+            //    foreach (TableCell cell in row.Cells)
+            //    {
+            //        cell.Attributes.CssStyle["text-align"] = "center";
+            //    }
+            //}
 
         }
         protected void btn_Agregar_Click(object sender, EventArgs e)

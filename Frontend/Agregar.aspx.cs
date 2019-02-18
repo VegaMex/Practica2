@@ -109,5 +109,10 @@ namespace Frontend
             //    Response.Write("No funciona, igual que tu vida.");
             //}
         }
+
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Página Principal.aspx");
+        }
     }
 }
