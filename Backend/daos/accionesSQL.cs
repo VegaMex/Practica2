@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Backend.modelo;
+using System.Data;
 
 namespace Backend.daos
 {
@@ -51,14 +52,14 @@ namespace Backend.daos
             try
             {
                 string strCadena = "server=DESKTOP-593ANJD ; database=pruebas ; USER ID=sa; PASSWORD=root";
-                SqlConnection conn = new SqlConnection(strCadena);
-                conn.Open();
+                SqlConnection con = new SqlConnection(strCadena);
+                con.Open();
                 string insertQuery = "DELETE FROM fichas WHERE id_ficha = @id_ficha";
-                SqlCommand cmd = new SqlCommand(insertQuery, conn);
+                SqlCommand cmd = new SqlCommand(insertQuery, con);
                 cmd.Parameters.AddWithValue("@id_ficha", id_ficha);
                 cmd.ExecuteNonQuery();
 
-                conn.Close();
+                con.Close();
 
                 return true;
             }
@@ -69,6 +70,54 @@ namespace Backend.daos
                 return false;
             }
         }
+
+        public List<Fichas> getAll()
+        {
+
+            List<Fichas> lista = new List<Fichas>();
+
+            SqlConnection con = new SqlConnection(@"server = DESKTOP-593ANJD ; database = pruebas; USER ID = sa; PASSWORD = root");
+
+            con.Open();
+
+            string insertQuery = "SELECT * FROM fichas";
+            SqlCommand cmd = new SqlCommand(insertQuery, con);
+
+            DataSet ds = new DataSet();
+
+            SqlDataAdapter ada = new SqlDataAdapter(cmd);
+
+            ada.Fill(ds);
+
+            con.Close();
+
+            DataTable dt = ds.Tables[0];
+
+            Fichas f;
+
+            foreach (DataRow r in dt.Rows)
+            {
+
+                f = new Fichas();
+
+                f.nombre = (String)r.ItemArray[1];
+                f.a_paterno = (String)r.ItemArray[2];
+                f.a_materno = (String)r.ItemArray[3];
+                f.n_ficha = (int)r.ItemArray[4];
+                f.fecha = (DateTime)r.ItemArray[5];
+                f.procedencia = (String)r.ItemArray[6];
+                f.opc_1 = (String)r.ItemArray[7];
+                f.opc_2 = (String)r.ItemArray[8];
+                f.opc_3 = (String)r.ItemArray[9];
+                f.promedio = (float)r.ItemArray[10];
+
+                lista.Add(f);
+            }
+
+            return lista;
+
+        }
+
 
     }
 }

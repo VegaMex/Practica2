@@ -17,9 +17,9 @@
             <br />
             <br />
             Ingrese ID:<br />
-            <asp:TextBox ID="txtID" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtID" runat="server" Width="70px"></asp:TextBox>
             <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" />
-            <asp:Button ID="btnModificar" runat="server" Text="Modificar" />
+            <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" />
             <br />
             <br />
         </div>

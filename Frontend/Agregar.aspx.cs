@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Backend.daos;
 using Backend.modelo;
 using Backend.util;
+using System.Data;
 
 namespace Frontend
 {
@@ -21,7 +22,7 @@ namespace Frontend
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            dateCalendario.SelectedDate = DateTime.Today;
+            //Calendar1.SelectedDate = DateTime.Today;
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace Frontend
                 modeloFicha.a_paterno = txtPaterno.Text;
                 modeloFicha.a_materno = txtMaterno.Text;
                 modeloFicha.n_ficha = int.Parse(txtFicha.Text);
-                modeloFicha.fecha = dateCalendario.SelectedDate;
+                modeloFicha.fecha = Calendar1.SelectedDate.Date;
                 modeloFicha.procedencia = txtProcedencia.Text;
                 modeloFicha.opc_1 = cboOpcion1.SelectedValue;
 
@@ -77,9 +78,15 @@ namespace Frontend
 
                 modeloFicha.promedio = float.Parse(txtPromedio.Text);
 
-                accion.insert(modeloFicha);
+                if (accion.insert(modeloFicha))
+                {
+                    Response.Redirect("Página Principal.aspx");
 
-                Response.Redirect("Página Principal.aspx");
+                }
+                else
+                {
+                    Response.Write("No se agregó nada :( ¿Seleccionó una fecha?");
+                }
             }
             else
             {

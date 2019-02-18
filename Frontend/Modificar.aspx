@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Agregar.aspx.cs" Inherits="Frontend.Agregar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Modificar.aspx.cs" Inherits="Frontend.Modificar" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Nueva ficha</title>
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <h2>Registro de fichas</h2>
+            <h2>Modificar ficha</h2>
         </div>
         <hr />
         <div>
@@ -27,8 +27,7 @@
             <asp:TextBox ID="txtFicha" runat="server"></asp:TextBox>
             <br /><br />
             Fecha de solicitud:<br />
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-            <br />
+            <asp:Calendar ID="dateCalendario" runat="server"></asp:Calendar>
             <br />
             Escuela de procedencia:<br />
             <asp:TextBox ID="txtProcedencia" runat="server"></asp:TextBox>
