@@ -16,7 +16,7 @@ namespace Backend.daos
         {
             try
             {
-                string strCadena = "server=DESKTOP-593ANJD ; database=pruebas ; USER ID=sa; PASSWORD=root";
+                string strCadena = @"server = WIN-1TUB8M2O9A1\SQLEXPRESS ; database = pruebas; USER ID = sa; PASSWORD = Root123";
                 SqlConnection conn = new SqlConnection(strCadena);
                 // SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegiConnectionString"].ConnectionString);
 
@@ -51,7 +51,7 @@ namespace Backend.daos
         {
             try
             {
-                string strCadena = "server=DESKTOP-593ANJD ; database=pruebas ; USER ID=sa; PASSWORD=root";
+                string strCadena = @"server = WIN-1TUB8M2O9A1\SQLEXPRESS ; database = pruebas; USER ID = sa; PASSWORD = Root123";
                 SqlConnection con = new SqlConnection(strCadena);
                 con.Open();
                 string insertQuery = "DELETE FROM fichas WHERE id_ficha = @id_ficha";
@@ -75,7 +75,7 @@ namespace Backend.daos
         {
             try
             {
-                string strCadena = "server=DESKTOP-593ANJD ; database=pruebas ; USER ID=sa; PASSWORD=root";
+                string strCadena = @"server = WIN-1TUB8M2O9A1\SQLEXPRESS ; database = pruebas; USER ID = sa; PASSWORD = Root123";
                 SqlConnection conn = new SqlConnection(strCadena);
                 // SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegiConnectionString"].ConnectionString);
 

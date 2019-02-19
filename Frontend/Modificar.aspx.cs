@@ -31,7 +31,7 @@ namespace Frontend
             {
                 //Response.Write(id_ficha);
 
-                SqlConnection con = new SqlConnection(@"server = DESKTOP-593ANJD ; database = pruebas; USER ID = sa; PASSWORD = root");
+                SqlConnection con = new SqlConnection(@"server = WIN-1TUB8M2O9A1\SQLEXPRESS ; database = pruebas; USER ID = sa; PASSWORD = Root123");
 
                 con.Open();
 

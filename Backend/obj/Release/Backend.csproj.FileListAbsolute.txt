@@ -1,0 +1,6 @@
+C:\Users\oscar\Documents\GitHub\Practica2\Backend\bin\Release\Backend.dll
+C:\Users\oscar\Documents\GitHub\Practica2\Backend\bin\Release\Backend.pdb
+C:\Users\oscar\Documents\GitHub\Practica2\Backend\obj\Release\Backend.csprojAssemblyReference.cache
+C:\Users\oscar\Documents\GitHub\Practica2\Backend\obj\Release\Backend.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\GitHub\Practica2\Backend\obj\Release\Backend.dll
+C:\Users\oscar\Documents\GitHub\Practica2\Backend\obj\Release\Backend.pdb

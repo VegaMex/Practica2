@@ -18,7 +18,7 @@ namespace Frontend
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"server = DESKTOP-593ANJD ; database = pruebas; USER ID = sa; PASSWORD = root");
+            SqlConnection con = new SqlConnection(@"server = WIN-1TUB8M2O9A1\SQLEXPRESS ; database = pruebas; USER ID = sa; PASSWORD = Root123");
 
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT id_Ficha AS ID, nombre AS Nombre, a_paterno AS 'Apellido Paterno', a_materno AS 'Apellido Materno'," +
