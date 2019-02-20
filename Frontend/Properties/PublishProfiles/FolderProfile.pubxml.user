@@ -6,7 +6,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\oscar\Desktop\Sitio</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\oscar\Desktop\pagina</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Agregar.aspx">
@@ -25,10 +25,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>01/25/2018 10:42:28</publishTime>
     </File>
     <File Include="bin/Backend.dll">
-      <publishTime>02/18/2019 15:39:40</publishTime>
+      <publishTime>02/18/2019 20:59:28</publishTime>
     </File>
     <File Include="bin/Backend.pdb">
-      <publishTime>02/18/2019 15:39:40</publishTime>
+      <publishTime>02/18/2019 20:59:28</publishTime>
     </File>
     <File Include="bin/es/Microsoft.AspNet.FriendlyUrls.resources.dll">
       <publishTime>07/30/2013 18:01:46</publishTime>
@@ -37,10 +37,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>02/11/2014 15:28:40</publishTime>
     </File>
     <File Include="bin/Frontend.dll">
-      <publishTime>02/18/2019 15:39:42</publishTime>
+      <publishTime>02/18/2019 20:59:29</publishTime>
     </File>
     <File Include="bin/Frontend.pdb">
-      <publishTime>02/18/2019 15:39:42</publishTime>
+      <publishTime>02/18/2019 20:59:29</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>07/30/2013 17:57:30</publishTime>
